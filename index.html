@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>price calculator</title>
+
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="home">
+        <h1 id="heading">price calculator<h1>
+      <div>
+        <button onclick="pricevalue(10)">Item 1</button>
+        <h3 id="price"></h3>
+      </div>
+      <div>
+        <button onclick="pricevalue(20)">Item 2</button>
+        <h3 id="price1"></h3>
+      </div>
+      <div>
+        <button onclick="pricevalue(30)" class="button-3" id="button-3">
+          <span class="item-3">Item 3</span>
+        </button>
+        <h3 id="price2"></h3>
+      </div>
+      <div>
+        <button onclick="pricevalue(40)" class="button-4" id="button-4">
+          <span class="item-4">Item 4</span>
+        </button>
+        <h3 id="price3"></h3>
+      </div>
+      <div>
+        <button onclick="pricevalue(50)" class="button-5" id="button-5">
+          <span class="item-5">Item 5</span>
+        </button>
+        <h3 id="price4"></h3>
+      </div>
+      <div>
+        <button onclick="result()">submit</button>
+        <div class="total">
+        <h3>Total:</h3>
+        <h3 id="total"></h3></div>
+      </div>
+    </div>
+  </body>
+</html>
