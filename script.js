@@ -1,36 +1,85 @@
-let count1 = 0;
-let count2 = 0;
-let count3 = 0;
-let count4 = 0;
-let count5 = 0;
-
+var b = 0;
 function pricevalue(a) {
+  b = b + 1;
   if (a == 10) {
-    count1++;
-    document.getElementById("price").innerText = a * count1;
+    var count1 = document.getElementById("quantity").value;
+    console.log(count1);
+    if (count1 > 0) {
+      document.getElementById("price").innerText = a * count1;
+    } else {
+      alert("Please enter the quantity");
+    }
   } else if (a == 20) {
-    count2++;
-    document.getElementById("price1").innerText = a * count2;
+    var count2 = document.getElementById("quantity1").value;
+    console.log(count2);
+    if (count2 > 0) {
+      document.getElementById("price1").innerText = a * count2;
+    } else {
+      alert("Please enter the quantity");
+    }
   } else if (a == 30) {
-    count3++;
-    document.getElementById("price2").innerText = a * count3;
+    var count3 = document.getElementById("quantity2").value;
+
+    if (count3 > 0) {
+      document.getElementById("price2").innerText = a * count3;
+    } else {
+      alert("Please enter the quantity");
+    }
   } else if (a == 40) {
-    count4++;
-    document.getElementById("price3").innerText = a * count4;
+    var count4 = document.getElementById("quantity3").value;
+
+    if (count4 > 0) {
+      document.getElementById("price3").innerText = a * count4;
+    } else {
+      alert("Please enter the quantity");
+    }
   } else {
-    count5++;
-    document.getElementById("price4").innerText = a * count5;
+    var count5 = document.getElementById("quantity4").value;
+
+    if (count5 > 0) {
+      document.getElementById("price4").innerText = a * count5;
+    } else {
+      alert("Please enter the quantity");
+    }
   }
 }
 function result() {
-  var s =
-    Number(document.getElementById("price").innerText) +
-    Number(document.getElementById("price1").innerText) +
-    Number(document.getElementById("price2").innerText) +
-    Number(document.getElementById("price3").innerText) +
-    Number(document.getElementById("price4").innerText);
-  var y = Number(s);
+  if (b > 0) {
+    var s =
+      Number(document.getElementById("price").innerText) +
+      Number(document.getElementById("price1").innerText) +
+      Number(document.getElementById("price2").innerText) +
+      Number(document.getElementById("price3").innerText) +
+      Number(document.getElementById("price4").innerText);
+    var y = Number(s);
 
-  document.getElementById("total").innerText = y;
-  console.log(count);
+    document.getElementById("display").innerText = y;
+  } else {
+    alert("Please enter the quantity");
+  }
+
+  // console.log(count);
+}
+function changeImage() {
+  var logo = document.getElementById("pop");
+  var container = document.querySelector(".container");
+  var cancel = document.getElementById("cancel");
+  var im = document.querySelectorAll(".overlay"); // add . to select by class
+  im.forEach(function (el) {
+    el.style.display = "block";
+  });
+  logo.style.display = "block";
+  cancel.style.display = "block";
+}
+function cancel() {
+  var logo = document.getElementById("pop");
+  var container = document.querySelector(".container");
+  var cancel = document.getElementById("cancel");
+  var im = document.querySelectorAll(".overlay"); // add . to select by class
+  im.forEach(function (el) {
+    el.style.display = "none";
+  });
+  logo.style.display = "none";
+  container.style.display = "flex";
+  cancel.style.display = "none";
 }
