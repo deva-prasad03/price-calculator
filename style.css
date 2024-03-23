@@ -134,9 +134,10 @@ button {
 #clear {
   height: 50px;
   width: 50px;
-  display: block;
+  display: inline;
   align-items: center;
   object-fit: cover;
+  padding: 0%;
 }
 .coloumn2 button:hover {
   background-color: black;
