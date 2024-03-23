@@ -83,3 +83,12 @@ function cancel() {
   container.style.display = "flex";
   cancel.style.display = "none";
 }
+function clear() {
+  var p1 = document.getElementById("price");
+  var p2 = document.getElementById("price1");
+  var p3 = document.getElementById("price2");
+  var p4 = document.getElementById("price3");
+  var p5 = document.getElementById("price4");
+  p1.textContent = "";
+  p2.innerText = "";
+}
